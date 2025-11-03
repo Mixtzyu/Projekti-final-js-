@@ -254,3 +254,62 @@ body.dark-mode .contact i {
     padding: 1rem;
   }
 }
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode .logo,
+body.dark-mode nav ul a,
+body.dark-mode .hamburger,
+body.dark-mode .hamburger i,
+body.dark-mode #darkModeToggle,
+body.dark-mode .contact p,
+body.dark-mode footer {
+  color: #000 !important; 
+}
+
+
+body.dark-mode a:hover {
+  color: #6200ee;
+}
+
+body.dark-mode .btn {
+  background-color: #6200ee; 
+  color: #fff;
+}
+
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode .logo,
+body.dark-mode nav ul a,
+body.dark-mode .hamburger,
+body.dark-mode .hamburger i,
+body.dark-mode #darkModeToggle,
+body.dark-mode .contact p,
+body.dark-mode footer {
+  color: #000 !important;   
+}
+
+
+body.dark-mode a:hover {
+  color: #6200ee;
+}
+
+body.dark-mode .btn {
+  background-color: #6200ee; 
+  color: #fff;
+}
