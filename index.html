@@ -1,66 +1,61 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diar Ademi - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard — Enhanced</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
-
   <header>
-    <div class="container">
-      <h2 class="logo">Diar Ademi</h2>
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Kreu</a></li>
-          <li><a href="#projects">Projektet</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
-        </div>
-      </nav>
-      <button id="darkModeToggle" class="btn-dark">🌙</button>
-    </div>
+    <h1>🌍 Weather Dashboard</h1>
+    <button id="modeToggle">☀️ Light Mode</button>
   </header>
 
+  <main>
+    <!-- Search -->
+    <div class="search">
+      <input id="cityInput" type="text" placeholder="Kërko qytetin... (Search city)" />
+      <button id="searchBtn">Search</button>
+    </div>
+    <p id="errorMsg" class="error-msg"></p>
 
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/135/222/small/portrait-of-handsome-man-with-blond-hair-free-vector.jpg" 
-           alt="Diar Ademi" class="profile-pic">
+    <!-- Current weather card -->
+    <div id="weatherCard" class="weather-card hidden" aria-live="polite">
+      <h2 id="cityName"></h2>
+      <p id="temp"></p>
+      <p id="wind"></p>
+      <p id="time"></p>
+      <button id="unitToggle">°C / °F</button>
+    </div>
+
+    <!-- Feature carousel -->
+    <section class="carousel-section">
+      <h2>🔎 Explore More</h2>
+      <div class="carousel">
+        <button class="carousel-btn left" id="prevBtn" aria-label="Previous">❮</button>
+
+        <div class="carousel-track" id="carouselTrack" role="list">
+          <div class="carousel-item" data-feature="7day" role="listitem">🌦 7-Day Forecast</div>
+          <div class="carousel-item" data-feature="tempmap" role="listitem">🌡 Temperature Map</div>
+          <div class="carousel-item" data-feature="wind" role="listitem">💨 Wind Patterns</div>
+          <div class="carousel-item" data-feature="aqi" role="listitem">🌫 Air Quality Index</div>
+          <div class="carousel-item" data-feature="sun" role="listitem">☀️ Sunrise & Sunset</div>
+          <div class="carousel-item" data-feature="climate" role="listitem">🌍 Global Trends</div>
+        </div>
+
+        <button class="carousel-btn right" id="nextBtn" aria-label="Next">❯</button>
       </div>
-      <h1>Pershendetje, un jam <span>Diar Ademi</span></h1>
-      <p>Një nxënës i klasës 12 që po e ndjek rrugën e programimit. Tani jam në nivelin e JavaScript-it.</p>
-      <a href="https://www.instagram.com/diaariiii/" target="_blank" class="btn">Fol me mua në Instagram</a>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projektet e Mia</h2>
-      <div id="projectContainer"></div>
-    </div>
-  </section>
-
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Kontakt</h2>
-      <p><i class="fas fa-phone"></i> +383 45 947 307</p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:diarademieco1@gmail.com">diarademieco1@gmail.com</a></p>
-      <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/diaariiii/" target="_blank">@diaariiii</a></p>
-    </div>
-  </section>
-
+    <!-- Feature container: dynamic content for each feature -->
+    <section id="featureContainer" class="feature-container hidden" aria-live="polite">
+      <!-- content injected by JS -->
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Diar Ademi. Të gjitha të drejtat e rezervuara.</p>
-    </div>
+    <p>Made with ❤️ by Diar — Powered by Open-Meteo</p>
   </footer>
 
   <script src="script.js"></script>
